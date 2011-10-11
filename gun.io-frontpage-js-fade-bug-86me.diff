@@ -1,5 +1,5 @@
 --- index.html.orig	2011-10-06 22:19:14.000000000 -0400
-+++ index.html	2011-10-11 08:24:41.000000000 -0400
++++ index.html	2011-10-11 08:39:55.000000000 -0400
 @@ -23,64 +23,127 @@
  var s = 0;
  
@@ -33,15 +33,15 @@
 +            jQuery(this).attr("src", "static/careers-blur.png");
 +            if(careerFade == false) {
 +                jQuery("h1#ttop, h2#tbottom").animate({
-+                    opacity:0.0,
++                    opacity:0.0
 +                }, 300, function() {
 +                    jQuery("h1#ttop").html(careersTopText);
 +                    jQuery("#tbottom").html(careersBottomText);
 +                    jQuery("h1#ttop").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    jQuery("#tbottom").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    careerFade = true;
 +                    contractFade = false;
@@ -73,15 +73,15 @@
 +            jQuery(this).attr("src", "static/contracts-blur.png");
 +            if(contractFade == false) {
 +                jQuery("h1#ttop, h2#tbottom").animate({
-+                    opacity:0.0,
++                    opacity:0.0
 +                }, 300, function() {
 +                    jQuery("h1#ttop").html(contractsTopText);
 +                    jQuery("#tbottom").html(contractsBottomText);
 +                    jQuery("h1#ttop").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    jQuery("#tbottom").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    contractFade = true;
 +                    careerFade = false;
@@ -113,15 +113,15 @@
 +            jQuery(this).attr("src", "static/opensource-blur.png");
 +            if(opensourceFade == false) {
 +                jQuery("h1#ttop, h2#tbottom").animate({
-+                    opacity:0.0,
++                    opacity:0.0
 +                }, 300, function() {
 +                    jQuery("h1#ttop").html(opensourceTopText);
 +                    jQuery("#tbottom").html(opensourceBottomText);
 +                    jQuery("h1#ttop").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    jQuery("#tbottom").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    opensourceFade = true;
 +                    contractFade = false;
@@ -153,15 +153,15 @@
 +            jQuery(this).attr("src", "static/banner_ul2-blur-fp.png");
 +            if(logoFade == false) {
 +                jQuery("h1#ttop, h2#tbottom").animate({
-+                    opacity:0.0,
++                    opacity:0.0
 +                }, 300, function() {
 +                    jQuery("h1#ttop").html(logoTopText);
 +                    jQuery("#tbottom").html(logoBottomText);
 +                    jQuery("h1#ttop").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    jQuery("#tbottom").animate({
-+                        opacity:1.0,
++                        opacity:1.0
 +                    }, 300);
 +                    logoFade = true;
 +                    opensourceFade = false;
