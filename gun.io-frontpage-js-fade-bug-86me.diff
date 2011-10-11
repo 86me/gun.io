@@ -1,5 +1,5 @@
 --- index.html.orig	2011-10-06 22:19:14.000000000 -0400
-+++ index.html	2011-10-11 07:54:30.000000000 -0400
++++ index.html	2011-10-11 08:24:41.000000000 -0400
 @@ -23,64 +23,127 @@
  var s = 0;
  
@@ -29,18 +29,18 @@
 +        /**
 +         * Careers
 +         */
-+        $("#careers").hover(function() {
-+            $(this).attr("src", "static/careers-blur.png");
++        jQuery("#careers").hover(function() {
++            jQuery(this).attr("src", "static/careers-blur.png");
 +            if(careerFade == false) {
-+                $("h1#ttop, h2#tbottom").animate({
++                jQuery("h1#ttop, h2#tbottom").animate({
 +                    opacity:0.0,
 +                }, 300, function() {
-+                    $("h1#ttop").html(careersTopText);
-+                    $("#tbottom").html(careersBottomText);
-+                    $("h1#ttop").animate({
++                    jQuery("h1#ttop").html(careersTopText);
++                    jQuery("#tbottom").html(careersBottomText);
++                    jQuery("h1#ttop").animate({
 +                        opacity:1.0,
 +                    }, 300);
-+                    $("#tbottom").animate({
++                    jQuery("#tbottom").animate({
 +                        opacity:1.0,
 +                    }, 300);
 +                    careerFade = true;
@@ -63,24 +63,24 @@
 -                                });
 -                s = 2;
 +        },function() {
-+            $(this).attr("src", "static/careers.png");
++            jQuery(this).attr("src", "static/careers.png");
 +        });
 +
 +        /**
 +         * Freelance
 +         */
-+        $("#contracts").hover(function() {
-+            $(this).attr("src", "static/contracts-blur.png");
++        jQuery("#contracts").hover(function() {
++            jQuery(this).attr("src", "static/contracts-blur.png");
 +            if(contractFade == false) {
-+                $("h1#ttop, h2#tbottom").animate({
++                jQuery("h1#ttop, h2#tbottom").animate({
 +                    opacity:0.0,
 +                }, 300, function() {
-+                    $("h1#ttop").html(contractsTopText);
-+                    $("#tbottom").html(contractsBottomText);
-+                    $("h1#ttop").animate({
++                    jQuery("h1#ttop").html(contractsTopText);
++                    jQuery("#tbottom").html(contractsBottomText);
++                    jQuery("h1#ttop").animate({
 +                        opacity:1.0,
 +                    }, 300);
-+                    $("#tbottom").animate({
++                    jQuery("#tbottom").animate({
 +                        opacity:1.0,
 +                    }, 300);
 +                    contractFade = true;
@@ -103,24 +103,24 @@
 -                                });
 -                s = 3;
 +        },function() {
-+            $(this).attr("src", "static/contracts.png");
++            jQuery(this).attr("src", "static/contracts.png");
 +        });
 +
 +        /**
 +         * Opensource
 +         */
-+        $("#opensource").hover(function() {
-+            $(this).attr("src", "static/opensource-blur.png");
++        jQuery("#opensource").hover(function() {
++            jQuery(this).attr("src", "static/opensource-blur.png");
 +            if(opensourceFade == false) {
-+                $("h1#ttop, h2#tbottom").animate({
++                jQuery("h1#ttop, h2#tbottom").animate({
 +                    opacity:0.0,
 +                }, 300, function() {
-+                    $("h1#ttop").html(opensourceTopText);
-+                    $("#tbottom").html(opensourceBottomText);
-+                    $("h1#ttop").animate({
++                    jQuery("h1#ttop").html(opensourceTopText);
++                    jQuery("#tbottom").html(opensourceBottomText);
++                    jQuery("h1#ttop").animate({
 +                        opacity:1.0,
 +                    }, 300);
-+                    $("#tbottom").animate({
++                    jQuery("#tbottom").animate({
 +                        opacity:1.0,
 +                    }, 300);
 +                    opensourceFade = true;
@@ -143,24 +143,24 @@
 -                                });
 -                s = 0;
 +        },function() {
-+            $(this).attr("src", "static/opensource.png");
++            jQuery(this).attr("src", "static/opensource.png");
 +        });
 +
 +        /**
 +         * Logo
 +         */
-+        $("#logoo").hover(function() {
-+            $(this).attr("src", "static/banner_ul2-blur-fp.png");
++        jQuery("#logoo").hover(function() {
++            jQuery(this).attr("src", "static/banner_ul2-blur-fp.png");
 +            if(logoFade == false) {
-+                $("h1#ttop, h2#tbottom").animate({
++                jQuery("h1#ttop, h2#tbottom").animate({
 +                    opacity:0.0,
 +                }, 300, function() {
-+                    $("h1#ttop").html(logoTopText);
-+                    $("#tbottom").html(logoBottomText);
-+                    $("h1#ttop").animate({
++                    jQuery("h1#ttop").html(logoTopText);
++                    jQuery("#tbottom").html(logoBottomText);
++                    jQuery("h1#ttop").animate({
 +                        opacity:1.0,
 +                    }, 300);
-+                    $("#tbottom").animate({
++                    jQuery("#tbottom").animate({
 +                        opacity:1.0,
 +                    }, 300);
 +                    logoFade = true;
@@ -175,7 +175,7 @@
 -    });            
 -</script>    
 +        },function() {
-+            $(this).attr("src", "static/banner_ul2-fp.png");
++            jQuery(this).attr("src", "static/banner_ul2-fp.png");
 +        });
 +    });
 +</script>
