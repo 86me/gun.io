@@ -1,0 +1,184 @@
+--- index.html.orig	2011-10-06 22:19:14.000000000 -0400
++++ index.html	2011-10-11 07:54:30.000000000 -0400
+@@ -23,64 +23,127 @@
+ var s = 0;
+ 
+     $(document).ready(function() {
+-      jQuery("#careers").hover(function() {
+-            jQuery('#careers').attr("src", "static/careers-blur.png")
+-            if(s != 1){ 
+-                jQuery('#ttop').fadeOut(300, function() {
+-                            jQuery('#ttop').text('Careers that rock.').fadeIn(300);
+-                                });
+-                jQuery('#tbottom').fadeOut(300, function() {
+-                            jQuery('#tbottom').html('Shitty jobs suck. Why spend your life doing something you don\'t love? <a href="careers.1">Find a better one</a> in your area today.').fadeIn(300);
+-                            });
+-                s = 1;
++        var careerFade = false;
++        var contractFade = false;
++        var opensourceFade = false;
++        var logoFade = false;
++        var careersTopText = "Careers that rock.";
++        var careersBottomText = 'Shitty jobs suck. Why spend your life doing something you don\'t love? <a href="careers.1">Find a better one</a> in your area today.';
++        var contractsTopText = "Freelancing done right.";
++        var contractsBottomText = 'You don\'t want to waste your time with idiots. That\'s why we offer <a href="/contracts/">no hassle freelancing</a> - winner takes all.';
++        var opensourceTopText = "Viva Open Source!";
++        var opensourceBottomText = 'Free software developers need to eat too. That\'s why we provide <a href="/open/">free gig posting</a> for open source projects.';
++        var logoTopText = "Hackers hiring hackers.";
++        var logoBottomText = 'Gun.io is a place for talented hackers to <i>hire each other</i> for small tasks. This isn\'t an ordinary job site.';
++        /**
++         * Careers
++         */
++        $("#careers").hover(function() {
++            $(this).attr("src", "static/careers-blur.png");
++            if(careerFade == false) {
++                $("h1#ttop, h2#tbottom").animate({
++                    opacity:0.0,
++                }, 300, function() {
++                    $("h1#ttop").html(careersTopText);
++                    $("#tbottom").html(careersBottomText);
++                    $("h1#ttop").animate({
++                        opacity:1.0,
++                    }, 300);
++                    $("#tbottom").animate({
++                        opacity:1.0,
++                    }, 300);
++                    careerFade = true;
++                    contractFade = false;
++                    opensourceFade = false;
++                    logoFade = false;
++                });
+             }
+-      }, function(){
+-            jQuery('#careers').attr("src", "static/careers.png");
+-      });        
+-      jQuery("#contracts").hover(function() {
+-            jQuery('#contracts').attr("src", "static/contracts-blur.png")
+-            if(s != 2){ 
+-                jQuery('#ttop').fadeOut(300, function() {
+-                            jQuery('#ttop').text('Freelancing done right.').fadeIn(300);
+-                                });
+-                jQuery('#tbottom').fadeOut(300, function() {
+-                    jQuery('#tbottom').html('You don\'t want to waste your time with idiots. That\'s why we offer <a href="contracts.1">no hassle freelancing</a> - winner takes all.').fadeIn(300);
+-                                });
+-                s = 2;
++        },function() {
++            $(this).attr("src", "static/careers.png");
++        });
++
++        /**
++         * Freelance
++         */
++        $("#contracts").hover(function() {
++            $(this).attr("src", "static/contracts-blur.png");
++            if(contractFade == false) {
++                $("h1#ttop, h2#tbottom").animate({
++                    opacity:0.0,
++                }, 300, function() {
++                    $("h1#ttop").html(contractsTopText);
++                    $("#tbottom").html(contractsBottomText);
++                    $("h1#ttop").animate({
++                        opacity:1.0,
++                    }, 300);
++                    $("#tbottom").animate({
++                        opacity:1.0,
++                    }, 300);
++                    contractFade = true;
++                    careerFade = false;
++                    opensourceFade = false;
++                    logoFade = false;
++                });
+             }
+-      }, function(){
+-            jQuery('#contracts').attr("src", "static/contracts.png");
+-      });        
+-      jQuery("#opensource").hover(function() {
+-            jQuery('#opensource').attr("src", "static/opensource-blur.png")
+-            if(s != 3){ 
+-                jQuery('#ttop').fadeOut(300, function() {
+-                            jQuery('#ttop').text('Viva Open Source!').fadeIn(300);
+-                                });
+-                jQuery('#tbottom').fadeOut(300, function() {
+-                            jQuery('#tbottom').html('Free software developers need to eat too. That\'s why we provide <a href="open.1">free gig posting</a> for open source projects.').fadeIn(300);
+-                                });
+-                s = 3;
++        },function() {
++            $(this).attr("src", "static/contracts.png");
++        });
++
++        /**
++         * Opensource
++         */
++        $("#opensource").hover(function() {
++            $(this).attr("src", "static/opensource-blur.png");
++            if(opensourceFade == false) {
++                $("h1#ttop, h2#tbottom").animate({
++                    opacity:0.0,
++                }, 300, function() {
++                    $("h1#ttop").html(opensourceTopText);
++                    $("#tbottom").html(opensourceBottomText);
++                    $("h1#ttop").animate({
++                        opacity:1.0,
++                    }, 300);
++                    $("#tbottom").animate({
++                        opacity:1.0,
++                    }, 300);
++                    opensourceFade = true;
++                    contractFade = false;
++                    careerFade = false;
++                    logoFade = false;
++                });
+             }
+-      }, function(){
+-            jQuery('#opensource').attr("src", "static/opensource.png");
+-      });        
+-      jQuery("#logoo").hover(function() {
+-            jQuery('#logoo').attr("src", "static/banner_ul2-blur-fp.png")
+-            if(s != 0){ 
+-                jQuery('#ttop').fadeOut(300, function() {
+-                            jQuery('#ttop').text('Hackers hiring hackers.').fadeIn(300);
+-                                });
+-                jQuery('#tbottom').fadeOut(300, function() {
+-                            jQuery('#tbottom').html('Gun.io is a place for talented hackers to <i>hire each other</i> for small tasks. This isn\'t an ordinary job site.').fadeIn(300);
+-                                });
+-                s = 0;
++        },function() {
++            $(this).attr("src", "static/opensource.png");
++        });
++
++        /**
++         * Logo
++         */
++        $("#logoo").hover(function() {
++            $(this).attr("src", "static/banner_ul2-blur-fp.png");
++            if(logoFade == false) {
++                $("h1#ttop, h2#tbottom").animate({
++                    opacity:0.0,
++                }, 300, function() {
++                    $("h1#ttop").html(logoTopText);
++                    $("#tbottom").html(logoBottomText);
++                    $("h1#ttop").animate({
++                        opacity:1.0,
++                    }, 300);
++                    $("#tbottom").animate({
++                        opacity:1.0,
++                    }, 300);
++                    logoFade = true;
++                    opensourceFade = false;
++                    contractFade = false;
++                    careerFade = false;
++                });
+             }
+-      }, function(){
+-            jQuery('#logoo').attr("src", "static/banner_ul2-fp.png");
+-      });        
+-    });            
+-</script>    
++        },function() {
++            $(this).attr("src", "static/banner_ul2-fp.png");
++        });
++    });
++</script>
+ <script src="static/jquery.watermark.min.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    jQuery(function($){
